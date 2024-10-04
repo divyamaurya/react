@@ -1,9 +1,9 @@
 import { useState } from "react";
-import InputBox from "./components/InputBox";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
+import InputBox from "./components/InputBox";
 
 function App() {
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
   const [convertedAmount, setConvertedAmount] = useState(0);
@@ -47,7 +47,7 @@ function App() {
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setAmount(amount)}
                 selectCurrency={from}
-                onAmountChange={(amount) => selectCurrency(amount)}
+                onAmountChange={(amount) => setAmount(amount)}
               />
             </div>
             <div className="relative w-full h-0.5">
@@ -66,6 +66,7 @@ function App() {
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
                 amountDisable
+                selectCurrency={to}
               />
             </div>
             <button

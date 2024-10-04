@@ -23,19 +23,11 @@ function App() {
     setConvertedAmount(amount * currencyInfo[to]);
   };
 
-  let BackgroundImage =
-    "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg";
   return (
-    // <div
-    //   className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-    //   style={{
-    //     backgroundImage: `url('${BackgroundImage}')`,
-    //   }}
-    // >
     <div className="flex h-screen">
       <div className="w-1/2 bg-gray-400 flex justify-center">
         <img
-          className="w-full fit"
+          className="w-full h-full object-cover"
           src="https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
       </div>
@@ -82,7 +74,6 @@ function App() {
               type="submit"
               className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
             >
-              {/* Convert {use to inr} */}
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
           </form>

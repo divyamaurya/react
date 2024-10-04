@@ -26,14 +26,23 @@ function App() {
   let BackgroundImage =
     "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg";
   return (
-    <div
-      className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-      style={{
-        backgroundImage: `url('${BackgroundImage}')`,
-      }}
-    >
-      <div className="w-full">
+    // <div
+    //   className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+    //   style={{
+    //     backgroundImage: `url('${BackgroundImage}')`,
+    //   }}
+    // >
+    <div className="flex h-screen">
+      <div className="w-1/2 bg-gray-400 flex justify-center">
+        <img
+          className="w-full fit"
+          src="https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        />
+      </div>
+
+      <div className="w-1/2 flex justify-center items-center bg-gray-300">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+          <h1 className="h-10 text-center font-bold">Currency Covertor</h1>
           <form
             onSubmit={(e) => {
               e.preventDefault();
